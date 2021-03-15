@@ -22,6 +22,14 @@ export class EstudianteComponent implements OnInit {
     });
   }
 
+  mostrarMas(){
+
+  }
+
+  eliminar(){
+    
+  }
+
 
 
 
