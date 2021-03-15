@@ -46,7 +46,7 @@ pages:
     - build-app
   script:
     - mkdir public
-    - mv ./dist/platzi-devops/* ./public/
+    - mv ./dist/rosetaTestFront/* ./public/
   artifacts:
     paths:
       - public
