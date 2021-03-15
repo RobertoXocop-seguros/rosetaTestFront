@@ -2,6 +2,8 @@ image: node:12.18.2
 stages:
   - install
   - test
+  - build
+  - deploy
 install-dependencies:
   stage: install
   script:
@@ -26,3 +28,29 @@ test-apps:
     - apt-get update && apt-get install -y google-chrome-stable
   script:
     - npm run test:ci
+build-app:
+  stage: build
+  variables:
+    BUILD_CONFIGURATION: 'production'
+  dependencies: 
+    - install-dependencies
+  script:
+    - npm run build
+  artifacts: 
+    expire_in: 1hr
+    paths:
+        - dist/
+pages:
+  stage: deploy
+  dependencies:
+    - build-app
+  script:
+    - mkdir public
+    - mv ./dist/rosetaTestFront/* ./public/
+  artifacts:
+    paths:
+      - public
+  environment:
+    name: production
+  only:
+    - branches
