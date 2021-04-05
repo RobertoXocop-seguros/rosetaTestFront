@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
 import { Estudiante } from 'src/app/_model/estudiante';
-import { EstudianteService } from 'src/app/_service/estudiante.service';
+import { EstudianteService } from 'src/app/core/_service/estudiante.service';
 
 @Component({
   selector: 'app-estudiante',

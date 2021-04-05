@@ -12,10 +12,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule, MatPaginatorIntl} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatCardModule} from '@angular/material/card';
-import {MatSnackBarModule} from '@angular/material/snack-bar'
-import {MatDialogModule} from '@angular/material/dialog'
-import {MatSelectModule} from '@angular/material/select'
-import {MatDatepickerModule} from '@angular/material/datepicker'
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatRadioModule } from '@angular/material/radio';
+import { MatListModule } from '@angular/material/list';
+import {MatBadgeModule} from '@angular/material/badge';
 import { MatNativeDateModule, MatExpansionModule, MAT_DATE_LOCALE, MatAutocompleteModule, MatStepperModule, MatSlideToggleModule, MatGridListModule, MatProgressBarModule } from '@angular/material';
 
 @NgModule({
@@ -44,7 +47,11 @@ import { MatNativeDateModule, MatExpansionModule, MAT_DATE_LOCALE, MatAutocomple
     MatStepperModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatRadioModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatBadgeModule
   ],
   exports:[
     MatSidenavModule,
@@ -69,7 +76,10 @@ import { MatNativeDateModule, MatExpansionModule, MAT_DATE_LOCALE, MatAutocomple
     MatStepperModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatRadioModule,
+    MatListModule,
+    MatBadgeModule
   ],
   providers:[
     {provide:MatPaginatorIntl, useClass: MatPaginatorIntl},
